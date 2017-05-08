@@ -16,6 +16,13 @@ $(document).ready(function(){
                 alert("Error: " + xhr.status + ": " + xhr.statusText);
         });
     });
+    
+    $("#button3").click(function(){
+    $.get("demo_test.json", function(data, status){
+        alert("Data: " + data + "\nStatus: " + status);
+    });
+    
+});
 });
 </script>
 </head>
@@ -26,6 +33,7 @@ $(document).ready(function(){
 
 <button>Get External Content</button>
 <button id="button2">Get External Content</button>
+<button id="button3">Get External Content json</button>
 
 </body>
 </html>
