@@ -4,6 +4,15 @@
 		<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css' />
 		<link rel='stylesheet' href='style.css' />
 		<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat:400,700'>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+		<script>
+		$(document).ready(function(){
+		    $("button").click(function(){
+		        $("p").hide();
+		    });
+		});
+		</script>
 	</head>
 	<body>
 		<div class="container">
@@ -22,6 +31,10 @@
 		        
 		     </ul>
 		</div>
+	<p>This is a paragraph.</p>
+	<p>This is another paragraph.</p>
+	
+	<button>Click me to hide paragraphs</button>
 	
 	</body>
 </html>
