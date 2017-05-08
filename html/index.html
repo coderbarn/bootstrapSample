@@ -9,7 +9,8 @@
 		<script>
 		$(document).ready(function(){
 		    $("button").click(function(){
-		        $("p").hide();
+		       // $("p").hide(); // hide all <p>
+		       $("#test").hide();
 		    });
 		});
 		</script>
@@ -32,7 +33,7 @@
 		     </ul>
 		</div>
 	<p>This is a paragraph.</p>
-	<p>This is another paragraph.</p>
+	<p id="test">This is another paragraph.</p>
 	
 	<button>Click me to hide paragraphs</button>
 	
