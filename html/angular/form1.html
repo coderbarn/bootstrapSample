@@ -1,0 +1,53 @@
+<html>
+    <body>
+        <form action="#" th:action="@{/}" th:object="${personForm}" method="post">
+            <table>
+                <tr>
+                    <td>First Name:</td>
+                    <td><input type="text" th:field="*{firstName}" /></td>
+                    <td th:if="${#fields.hasErrors('firstName')}" th:errors="*{name}">Name Error</td>
+                </tr>
+                 <tr>
+                    <td>Last Name:</td>
+                    <td><input type="text" th:field="*{lastName}" /></td>
+                    <td th:if="${#fields.hasErrors('lastName')}" th:errors="*{name}">Name Error</td>
+                </tr>
+                <tr>
+                    <td>Age:</td>
+                    <td><input type="text" th:field="*{age}" /></td>
+                    <td th:if="${#fields.hasErrors('age')}" th:errors="*{age}">Age Error</td>
+                </tr>
+                <tr>
+                    <td>Player Number:</td>
+                    <td><input type="text" th:field="*{playerNum}" /></td>
+                    <td th:if="${#fields.hasErrors('playerNum')}" th:errors="*{playerNum}">Player Num Error</td>
+                </tr>
+                
+                <tr>
+	                 <td>Default Position:</td>
+                    <td>
+	                    <select name="defaultPosition" title="DefaultPosition">
+							  <option value="LB">Left Back</option>
+							  <option value="CLB">Center Left Back</option>
+							  <option value="CRB">Center Right Back</option>
+							  <option value="RB">Right Back</option>
+							  <option value="LM">Left Midfield</option>
+							  <option value="CM">Center Midfield</option>
+							  <option value="RM">Right Midfield</option>
+							  <option value="LCM">Left Center Midfield</option>
+							  <option value="RCM">Right Center Midfield</option>
+							  <option value="LF">Left Forward</option>
+							  <option value="S">Striker</option>
+							  <option value="RF">Right Forward</option>
+							  <option value="K">Keeper</option>
+							  <option value="OTHER">Other</option>
+						</select> 
+					</td>
+				</tr>
+                <tr>
+                    <td><button type="submit">Submit</button></td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>

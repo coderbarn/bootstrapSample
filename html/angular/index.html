@@ -1,0 +1,29 @@
+<!doctype html>
+<html ng-app="demo">
+	<head>
+		<title>Hello AngularJS</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+    	<script type="text/javascript" src="js/soccerapp.js"></script>
+	</head>
+
+	<body>
+		<div ng-controller="players">
+			<ul>
+			  <li ng-repeat="x in players">
+			    {{ x.firstName }}  {{x.lastName}}  {{x.defaultPosition}} {{x.age}}
+			    	<a href="{{x._links.person.href}}">Link</a>
+			  </li>
+			</ul>
+			
+		</div>
+<!--  		<script>
+		var myApp = angular.module('demo', [])
+			.controller('players', function($scope, $http) {
+			    $http.get('http://localhost:9000/people/').
+			        then(function(response) {
+			            $scope.players = response.data._embedded.people;
+			        });
+			});
+		</script> -->
+	</body>
+</html>
